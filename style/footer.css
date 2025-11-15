@@ -1,0 +1,43 @@
+/* 🧹 Footer cuchitrilesco */
+.cuchitril-footer {
+  background-color: #0a0a0a;
+  color: #ffd6f6;
+  padding: 3rem 2rem;
+  text-align: center;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.9rem;
+  border-top: 2px solid #ff00aa;
+}
+
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.footer-links a {
+  color: #ff00aa;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #ffd6f6;
+  text-shadow: 0 0 6px #ff00aa;
+}
+
+.footer-frase {
+  margin-top: 1.5rem;
+  font-style: italic;
+  color: #00ff99;
+  text-shadow: 0 0 4px #00ff99;
+}

@@ -1,0 +1,142 @@
+/* 🎨 Estilo para secciones de inicio no convencionales */
+
+section {
+    padding: 4rem 2rem;
+    text-align: center;
+    color: #fff;
+}
+
+h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #ff00aa;
+    text-shadow: 0 0 6px #ff00aa;
+}
+
+/* 🚫 Lo que NO hacemos */
+.no-hacemos ul {
+    list-style: none;
+    padding: 0;
+    font-style: italic;
+    font-size: 1.2rem;
+}
+
+.no-hacemos li::before {
+    content: "❌ ";
+    color: #ff4d6d;
+}
+
+/* 🧪 Experimentos activos */
+.experimento-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.experimento-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid #ff00aa;
+    border-radius: 12px;
+    padding: 1.5rem;
+    width: 280px;
+    transition: transform 0.3s ease;
+}
+
+.experimento-card:hover {
+    transform: scale(1.05);
+}
+
+.experimento-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: #ffd6f6;
+}
+
+.experimento-card p {
+    font-size: 1rem;
+    line-height: 1.4;
+    color: #e0e0e0;
+}
+
+.experimento-card button {
+    margin-top: 1rem;
+    background-color: #ff00aa;
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.experimento-card button:hover {
+    background-color: #ff4dcb;
+}
+
+/* 📊 Estado del holding */
+.estado-holding ul {
+    list-style: none;
+    padding: 0;
+    font-family: monospace;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.estado-holding li::before {
+    content: "🟢 ";
+    color: #00ff99;
+}
+
+/* 📡 Señales desde el cuchitril
+.senales p {
+    font-size: 1.4rem;
+    font-style: italic;
+    color: #ffd6f6;
+    text-shadow: 0 0 6px #ff00aa;
+} */
+
+/* 📟 Estilo consola retro */
+.senales p {
+  font-family: monospace;
+  font-size: 1.4rem;
+  color: #00ff99;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  display: inline-block;
+  text-align: left;
+  max-width: 90vw;
+  white-space: pre-wrap;
+  position: relative;
+}
+
+.senales p::after {
+  content: "_";
+  animation: blink 1s infinite;
+  position: absolute;
+  right: -1rem;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+.cholguan-diagnostico {
+  display: none;  
+  margin-top: 1rem;
+  font-style: italic;
+  color: #00ff99;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 0.8rem 1.2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 6px #00ff99;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
