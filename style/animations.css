@@ -1,0 +1,69 @@
+/* ✨ Hover y transiciones */
+.nav-links a {
+  color: #f0f0f0;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #1ec6ff;
+}
+
+@keyframes neon-chispazo {
+  0% {
+    opacity: 0;
+    filter: none;
+  }
+  5% {
+    opacity: 0.3;
+    filter: drop-shadow(0 0 2px #ff00aa);
+  }
+  10% {
+    opacity: 0.8;
+    filter: drop-shadow(0 0 6px #ff00aa);
+  }
+  15% {
+    opacity: 0.2;
+    filter: none;
+  }
+  20% {
+    opacity: 1;
+    filter: drop-shadow(0 0 10px #ff00aa) drop-shadow(0 0 20px #ff00aa);
+  }
+  25% {
+    opacity: 0.5;
+    filter: drop-shadow(0 0 4px #ff00aa);
+  }
+  30% {
+    opacity: 1;
+    filter: drop-shadow(0 0 12px #ff00aa);
+  }
+  35% {
+    opacity: 0.6;
+    filter: drop-shadow(0 0 6px #ff00aa);
+  }
+  40% {
+    opacity: 1;
+    filter: drop-shadow(0 0 10px #ff00aa) drop-shadow(0 0 20px #ff00aa);
+  }
+  100% {
+    opacity: 1;
+    filter: drop-shadow(0 0 10px #ff00aa) drop-shadow(0 0 20px #ff00aa);
+  }
+}
+
+@keyframes neon-parpadeo {
+  0%, 97%, 100% {
+    opacity: 1;
+    filter: drop-shadow(0 0 10px #ff00aa) drop-shadow(0 0 20px #ff00aa);
+  }
+  98% {
+    opacity: 0.6;
+    filter: drop-shadow(0 0 4px #ff00aa);
+  }
+  99% {
+    opacity: 1;
+    filter: drop-shadow(0 0 12px #ff00aa);
+  }
+}

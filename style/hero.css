@@ -1,0 +1,100 @@
+/* 🏠 Hero de inicio */
+.hero {
+  position: relative;
+  height: 100vh;
+  background-image: url("../assets/images/Fondo1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 100vh;
+  padding: 0 2rem;
+  flex-direction: column;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  border-radius: 12px;
+  color: #fff;
+  max-width: 1000px; /* 👈 Más espacio para el texto */
+  z-index: 1;
+}
+
+.overlay h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.overlay p {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  font-style: normal; /* 👈 Quitamos la cursiva */
+}
+
+.logo-hero {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+  animation: neon-chispazo 2.5s ease-out forwards,
+    neon-parpadeo 10s infinite ease-in-out;
+  animation-delay: 0s, 2.5s;
+  max-width: 400px;
+}
+
+.logo-hero:hover {
+  transform: scale(1.05); /* ✨ Efecto hover suave */
+}
+
+.hero-tagline {
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  font-style: normal;
+  color: #f0f0f0;
+  text-align: center;
+  margin-top: 1rem;
+  line-height: 1.4;
+  width: 100%;
+  max-width: 1000px; /* 👈 Quepa en una línea si hay espacio */
+  white-space: normal; /* 👈 Permite múltiples líneas si es necesario */
+  overflow: visible;
+  text-overflow: unset;
+  opacity: 0;
+  animation: taglineFade 2s ease-out 2.5s forwards;
+}
+
+@keyframes taglineFade {
+  to {
+    opacity: 1;
+    text-shadow: 0 0 6px #ff00aa;
+  }
+}
+
+/* 📱 Responsive */
+@media (min-width: 1200px) {
+  .logo-hero {
+    max-width: 500px;
+  }
+
+  .overlay h1 {
+    font-size: 3.5rem;
+  }
+
+  .overlay p {
+    font-size: 1.6rem;
+  }
+
+  .hero-tagline {
+    font-size: 1.6rem;
+    max-width: 1000px;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-tagline {
+    font-size: 1.4rem;
+  }
+}
