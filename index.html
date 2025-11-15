@@ -5,66 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>El Cuchitril Media</title>
     <link rel="stylesheet" href="style/main.css" />
+    <link rel="icon" href="assets/images/RAYOS.png" type="image/png" />
   </head>
   <body>
-    <header>
+    <!-- 🧭 Barra de navegación -->
+    <nav class="navbar">
       <img
         src="assets/images/ECM_COLOR.png"
         alt="El Cuchitril Media"
-        class="logo"
+        class="logo-navbar"
       />
-      <p>
-        Su lugar de ignorancia, desvaríos... y donde la abuela Enriqueta
-        responde
-      </p>
-    </header>
+      <ul class="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#radio">El Cuchitril Radio</a></li>
+        <li><a href="#cholguan">El Cholguán</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
 
-    <section id="intro">
-      <button id="playAudio">▶️ Cortina de bienvenida</button>
-      <audio id="cortina" src="assets/audio/Windows 98 startup.wav"></audio>
-    </section>
-
-    <section id="podcast">
-      <h2>Episodios recientes</h2>
-      <p>Escúchanos en Spotify o directo aquí:</p>
-      <div class="player-card">
-        <iframe
-          data-testid="embed-iframe"
-          style="border-radius: 12px"
-          src="https://open.spotify.com/embed/show/6OgknfYM92iXJRQC1iU8S1?utm_source=generator&theme=0"
-          width="100%"
-          height="152"
-          frameborder="0"
-          allowfullscreen=""
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-          loading="lazy"
-        ></iframe>
+    <!-- 🏠 Sección de inicio con fondo hero -->
+    <section id="inicio" class="hero">
+      <div class="overlay">
+        <h1>El Cuchitril Media</h1>
+        <p>
+          Desde podcasts hasta proyectos visuales, somos un holding de ideas
+          absurdamente serias.<br />
+          Si no entendiste, mejor. Esa es la idea.
+        </p>
       </div>
     </section>
 
-    <section id="abuela">
-      <h2>🧓 La Abuela Enriqueta Responde</h2>
-      <form>
-        <label for="pregunta">¿Qué quiere saber, mijo?</label>
-        <input
-          type="text"
-          id="pregunta"
-          name="pregunta"
-          placeholder="Escriba su duda..."
-          required
-        />
-        <button type="submit">Preguntar</button>
-        <button id="consejo-dia" type="button">Consejo del día</button>
-      </form>
-    </section>
-
-    <footer>
-      <p>
-        Contacto: celcuchitrildeltilla@gmail.com | GitHub:
-        <a href="https://github.com/doncesar">DonCesar</a>
-      </p>
-    </footer>
-
-    <script src="scripts/main.js"></script>
+    <!-- Aquí seguirían las demás secciones: radio, cholguán, contacto... -->
   </body>
 </html>
