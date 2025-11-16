@@ -1,0 +1,62 @@
+/* 🎙️ Podcast Section */
+.podcast-section {
+  background-color: #111;
+  color: #f5f5f5;
+  padding: 4em 2em;
+  text-align: center;
+  font-family: 'Orbitron', sans-serif;
+  position: relative;
+}
+
+.podcast-title {
+  font-size: 2.5em;
+  color: #0ff;
+  text-shadow: 0 0 5px #0ff;
+  margin-bottom: 0.2em;
+}
+
+.podcast-subtitle {
+  font-size: 1.1em;
+  color: #aaa;
+  margin-bottom: 2em;
+  font-style: italic;
+}
+
+.podcast-player {
+  max-width: 600px;
+  margin: 0 auto 2em;
+  box-shadow: 0 0 10px #0ff;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.podcast-extras {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: center;
+}
+
+.autodestruct-btn,
+.abuela-btn {
+  background: #222;
+  color: #0f0;
+  border: 2px solid #0f0;
+  padding: 0.6em 1.2em;
+  font-family: 'Courier New', monospace;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.autodestruct-btn:hover,
+.abuela-btn:hover {
+  background: #0f0;
+  color: #000;
+}
+
+.abuela-recomienda {
+  margin-top: 1em;
+  font-size: 0.95em;
+  color: #f0f0f0;
+  font-style: italic;
+}

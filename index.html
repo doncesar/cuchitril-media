@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="style/footer.css" />
     <link rel="stylesheet" href="style/animations.css" />
     <link rel="stylesheet" href="style/inicio.css" />
+    <link rel="stylesheet" href="style/modal.css" />
     <link rel="icon" href="assets/images/RAYOS.png" type="image/png" />
     <link
       href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap"
@@ -30,7 +31,8 @@
         class="logo-navbar"
       />
 
-      <button class="menu-toggle" aria-label="Abrir menú"></button><!-- ☰ -->
+      <button class="menu-toggle" aria-label="Abrir menú"></button
+      ><!-- ☰ -->
 
       <ul class="nav-links">
         <li><a href="#inicio">Inicio</a></li>
@@ -75,19 +77,24 @@
       <h2>Experimentos activos</h2>
       <div class="experimento-grid">
         <div class="experimento-card">
-          <h3>La abuela que grita consejos</h3>
-          <p>Un asistente de voz que te reta si no haces caso.</p>
-          <button>Ver sin entender</button>
+          <h3>La abuela Enriqueta te aconseja</h3>
+          <p>Haz clic y recibe su sabiduría.</p>
+          <button onclick="activarAbuela()">Aprender</button>
+          <div class="abuela-consejo"></div>
+          <!-- Aquí se insertará la frase -->
         </div>
         <div class="experimento-card">
           <h3>Podcast que se autodestruye</h3>
           <p>Solo puedes escucharlo una vez. Después, puff.</p>
-          <button>Escuchar (bajo tu propio riesgo)</button>
+          <button onclick="openModal()" class="autodestruct-btn">
+            Autodestruir episodio
+          </button>
         </div>
+        <!-- Si estás leyendo esto, probablemente eres uno de los nuestros. Bienvenido al subsuelo de El Cuchitril Media. -->
         <div class="experimento-card">
-          <h3>Cholguán interactivo</h3>
+          <h3>El Cholguán interactivo</h3>
           <p>Haz clic y descubre qué tan desinformado estás.</p>
-          <button onclick="activarCholguan()">Entrar al Cholguán</button>
+          <button onclick="activarCholguan()">Descubrir</button>
           <div class="cholguan-diagnostico"></div>
           <!-- Aquí se insertará la frase -->
         </div>
@@ -118,7 +125,36 @@
       <p id="mensaje-cuchitril">“...”</p>
     </section>
 
-    <!-- Aquí seguirían las demás secciones: radio, cholguán, contacto... -->
+    <!-- 🎧 Sección del Podcast -->
+    <section id="radio" class="podcast-section">
+      <h2 class="podcast-title">🎙️ El Cuchitril Radio</h2>
+      <p class="podcast-subtitle">
+        Episodios grabados entre el delirio y la lucidez.
+      </p>
+
+      <div class="podcast-player">
+        <iframe
+          style="border-radius: 12px"
+          src="https://open.spotify.com/show/6OgknfYM92iXJRQC1iU8S1?si=d770b5e605fc4557&nd=1&dlsi=767bc7669f6e4ae5"
+          width="100%"
+          height="152"
+          frameborder="0"
+          allowtransparency="true"
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy"
+        ></iframe>
+      </div>
+
+      <div class="podcast-extras">
+        <button onclick="openModal()" class="autodestruct-btn">
+          🕵️ Autodestruir episodio
+        </button>
+        <button onclick="recomendarEpisodio()" class="abuela-btn">
+          👵 ¿Qué episodio recomienda Enriqueta?
+        </button>
+        <div class="abuela-recomienda"></div>
+      </div>
+    </section>
 
     <!-- 📄 Footer -->
     <footer class="cuchitril-footer">
@@ -145,5 +181,37 @@
         </p>
       </div>
     </footer>
+
+    <!-- Modal de Autodestrucción -->
+    <div
+      class="modal"
+      id="autodestruct-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-title"
+    >
+      <div class="modal-content">
+        <h2 id="modal-title">🧨 Protocolo de Autodestrucción Activado</h2>
+        <p>
+          Tranquilo, no somos tan idiotas como para borrar un episodio por un
+          clic…<br />
+          …aunque tampoco tan genios como para hacer que se borre solo.<br /><br />
+          Esto es solo una simulación dramática para que sientas que estás en
+          una película de espías.<br />
+          Tu episodio sigue intacto. Pero gracias por jugar.
+        </p>
+        <div class="countdown">
+          Autodestrucción en 3… 2… 1… <span class="fake">Nah, era broma.</span>
+        </div>
+        <div class="modal-buttons">
+          <button class="btn cancel-btn" onclick="closeModal()">
+            Mejor no juego con fuego
+          </button>
+          <button class="btn accept-btn" onclick="closeModal()">
+            Igual quería sentirme importante
+          </button>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

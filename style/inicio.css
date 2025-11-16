@@ -89,14 +89,6 @@ h2 {
     color: #00ff99;
 }
 
-/* 📡 Señales desde el cuchitril
-.senales p {
-    font-size: 1.4rem;
-    font-style: italic;
-    color: #ffd6f6;
-    text-shadow: 0 0 6px #ff00aa;
-} */
-
 /* 📟 Estilo consola retro */
 .senales p {
   font-family: monospace;
@@ -125,6 +117,18 @@ h2 {
 }
 
 .cholguan-diagnostico {
+  display: none;  
+  margin-top: 1rem;
+  font-style: italic;
+  color: #00ff99;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 0.8rem 1.2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 6px #00ff99;
+  animation: fadeIn 0.5s ease;
+}
+
+.abuela-consejo {
   display: none;  
   margin-top: 1rem;
   font-style: italic;
