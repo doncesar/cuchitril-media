@@ -60,6 +60,26 @@
 //   }
 // });
 
+// === Funciones del menu ===
+const toggle = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector(".nav-links");
+
+// Crea el fondo interactivo
+const overlay = document.createElement("div");
+overlay.className = "menu-overlay";
+document.body.appendChild(overlay);
+
+toggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+  overlay.classList.toggle("active");
+  toggle.classList.toggle("open"); // cambia ícono ☰ ↔ ❌
+});
+
+overlay.addEventListener("click", () => {
+  navLinks.classList.remove("active");
+  overlay.classList.remove("active");
+  toggle.classList.remove("open");
+});
 
 
 // === Señales desde el cuchitril ===
@@ -75,7 +95,6 @@ function mostrarFraseRetro() {
     "“Diseñamos con amor, caos y un poco de café soluble recalentado.”",
     "“La radio está encendida. Nadie sabe cómo se apaga.”",
     "“No es un bug, es una abuela con carácter.”",
-    "“Si ves un rayo, hazle caso. O no.”",
     "“La estética es importante. La lógica, opcional.”",
     "“Este sitio fue testeado y aprobado por gatos.”",
     "“No tenemos misión. Tenemos intuición.”",

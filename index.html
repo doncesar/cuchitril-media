@@ -1,121 +1,149 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>El Cuchitril Media</title>
+    <link rel="stylesheet" href="style/base.css" />
+    <link rel="stylesheet" href="style/navbar.css" />
+    <link rel="stylesheet" href="style/hero.css" />
+    <link rel="stylesheet" href="style/radio.css" />
+    <link rel="stylesheet" href="style/abuela.css" />
+    <link rel="stylesheet" href="style/cholguan.css" />
+    <link rel="stylesheet" href="style/footer.css" />
+    <link rel="stylesheet" href="style/animations.css" />
+    <link rel="stylesheet" href="style/inicio.css" />
+    <link rel="icon" href="assets/images/RAYOS.png" type="image/png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>El Cuchitril Media</title>
-  <link rel="stylesheet" href="style/base.css" />
-  <link rel="stylesheet" href="style/navbar.css" />
-  <link rel="stylesheet" href="style/hero.css" />
-  <link rel="stylesheet" href="style/radio.css" />
-  <link rel="stylesheet" href="style/abuela.css" />
-  <link rel="stylesheet" href="style/cholguan.css" />
-  <link rel="stylesheet" href="style/footer.css" />
-  <link rel="stylesheet" href="style/animations.css" />
-  <link rel="stylesheet" href="style/inicio.css" />
-  <link rel="icon" href="assets/images/RAYOS.png" type="image/png" />
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet" />
-</head>
+  <body>
+    <script src="scripts/main.js" defer></script>
+    <!-- 🧭 Barra de navegación -->
+    <nav class="navbar">
+      <img
+        src="assets/images/ECM_COLOR.png"
+        alt="El Cuchitril Media"
+        class="logo-navbar"
+      />
 
-<body>
-  <script src="scripts/main.js" defer></script>
-  <!-- 🧭 Barra de navegación -->
-  <nav class="navbar">
-    <img src="assets/images/ECM_COLOR.png" alt="El Cuchitril Media" class="logo-navbar" />
-    <ul class="nav-links">
-      <li><a href="#inicio">Inicio</a></li>
-      <li><a href="#radio">El Cuchitril Radio</a></li>
-      <li><a href="#cholguan">El Cholguán</a></li>
-      <li><a href="#contacto">Contacto</a></li>
-    </ul>
-  </nav>
+      <button class="menu-toggle" aria-label="Abrir menú"></button><!-- ☰ -->
 
-  <!-- 🏠 Sección de inicio con fondo hero -->
-  <section id="inicio" class="hero">
-    <div class="overlay">
-      <img src="assets/images/ECM_BLANCO.png" alt="El Cuchitril Media" class="logo-hero" />
-      <p class="hero-tagline">
-        Desde podcasts hasta proyectos visuales, somos un holding de ideas
-        absurdamente serias. Si no entendiste, mejor. Esa es la idea.
-      </p>
-    </div>
-  </section>
+      <ul class="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#radio">El Cuchitril Radio</a></li>
+        <li><a href="#cholguan">El Cholguán</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
 
-  <!-- 🚫 Lo que NO hacemos -->
-  <section class="no-hacemos">
-    <h2>Lo que NO hacemos</h2>
-    <ul>
-      <li>No vendemos seguros de vida (todavía)</li>
-      <li>No tenemos un podcast sobre taxidermia</li>
-      <li>No sabemos qué es el éxito, pero lo editamos en post producción</li>
-      <li>No usamos Comic Sans (excepto bajo amenaza)</li>
-      <li>No tenemos un programa de cuicos viajando y comiendo. Porque el hambre no es contenido.</li>
-    </ul>
-  </section>
-
-  <!-- 🧪 Experimentos activos -->
-  <section class="experimentos">
-    <h2>Experimentos activos</h2>
-    <div class="experimento-grid">
-      <div class="experimento-card">
-        <h3>La abuela que grita consejos</h3>
-        <p>Un asistente de voz que te reta si no haces caso.</p>
-        <button>Ver sin entender</button>
+    <!-- 🏠 Sección de inicio con fondo hero -->
+    <section id="inicio" class="hero">
+      <div class="overlay">
+        <img
+          src="assets/images/ECM_BLANCO.png"
+          alt="El Cuchitril Media"
+          class="logo-hero"
+        />
+        <p class="hero-tagline">
+          Desde podcasts hasta proyectos visuales, somos un holding de ideas
+          absurdamente serias. Si no entendiste, mejor. Esa es la idea.
+        </p>
       </div>
-      <div class="experimento-card">
-        <h3>Podcast que se autodestruye</h3>
-        <p>Solo puedes escucharlo una vez. Después, puff.</p>
-        <button>Escuchar (bajo tu propio riesgo)</button>
+    </section>
+
+    <!-- 🚫 Lo que NO hacemos -->
+    <section class="no-hacemos">
+      <h2>Lo que NO hacemos</h2>
+      <ul>
+        <li>No vendemos seguros de vida (todavía)</li>
+        <li>No tenemos un podcast sobre taxidermia</li>
+        <li>No sabemos qué es el éxito, pero lo editamos en post producción</li>
+        <li>No usamos Comic Sans (excepto bajo amenaza)</li>
+        <li>
+          No tenemos un programa de cuicos viajando y comiendo. Porque el hambre
+          no es contenido.
+        </li>
+      </ul>
+    </section>
+
+    <!-- 🧪 Experimentos activos -->
+    <section class="experimentos">
+      <h2>Experimentos activos</h2>
+      <div class="experimento-grid">
+        <div class="experimento-card">
+          <h3>La abuela que grita consejos</h3>
+          <p>Un asistente de voz que te reta si no haces caso.</p>
+          <button>Ver sin entender</button>
+        </div>
+        <div class="experimento-card">
+          <h3>Podcast que se autodestruye</h3>
+          <p>Solo puedes escucharlo una vez. Después, puff.</p>
+          <button>Escuchar (bajo tu propio riesgo)</button>
+        </div>
+        <div class="experimento-card">
+          <h3>Cholguán interactivo</h3>
+          <p>Haz clic y descubre qué tan desinformado estás.</p>
+          <button onclick="activarCholguan()">Entrar al Cholguán</button>
+          <div class="cholguan-diagnostico"></div>
+          <!-- Aquí se insertará la frase -->
+        </div>
       </div>
-      <div class="experimento-card">
-        <h3>Cholguán interactivo</h3>
-        <p>Haz clic y descubre qué tan desinformado estás.</p>
-        <button onclick="activarCholguan()">Entrar al Cholguán</button>
-        <div class="cholguan-diagnostico"></div> <!-- Aquí se insertará la frase -->
+    </section>
+
+    <!-- 📊 Estado del holding -->
+    <section class="estado-holding">
+      <h2>Estado del holding</h2>
+      <ul>
+        <li>Micrófono vintage: ✅ operativo</li>
+        <li>Ideas absurdas: 🔥 97%</li>
+        <li>Servidor emocional: 💔 reiniciando... otra vez</li>
+        <li>Abuela Enriqueta: 👵 en modo pasivo-agresivo</li>
+        <li>Cable coaxial: 🔌 atado con masking tape</li>
+        <li>Presencia de gatos en estudio: 🐈 intermitente</li>
+        <li>Backup de ideas: 💾 lleno de memes y recetas</li>
+        <li>
+          Creatividad: 🚀 despegando hacia lo desconocido (acto seguido: se
+          estrella)
+        </li>
+      </ul>
+    </section>
+
+    <!-- 📡 Señales desde el cuchitril -->
+    <section class="senales">
+      <h2>Señales desde el cuchitril</h2>
+      <p id="mensaje-cuchitril">“...”</p>
+    </section>
+
+    <!-- Aquí seguirían las demás secciones: radio, cholguán, contacto... -->
+
+    <!-- 📄 Footer -->
+    <footer class="cuchitril-footer">
+      <div class="footer-content">
+        <p>
+          © El Cuchitril Media 2025 — Todos los derechos reservados por la
+          abuela Enriqueta.
+        </p>
+        <ul class="footer-links">
+          <li><a href="#">Manual de uso no oficial</a></li>
+          <li><a href="#">Modo oscuro (experimental)</a></li>
+          <li>
+            <a
+              href="https://www.instagram.com/elcuchitrilmedia"
+              target="_blank"
+              rel="noopener"
+            >
+              Contacto vía señales de humo
+            </a>
+          </li>
+        </ul>
+        <p class="footer-frase">
+          “Si llegaste hasta aquí, es porque algo te hizo ruido.”
+        </p>
       </div>
-    </div>
-  </section>
-
-  <!-- 📊 Estado del holding -->
-  <section class="estado-holding">
-    <h2>Estado del holding</h2>
-    <ul>
-      <li>Micrófono vintage: ✅ operativo</li>
-      <li>Ideas absurdas: 🔥 97%</li>
-      <li>Servidor emocional: 💔 reiniciando... otra vez</li>
-      <li>Abuela Enriqueta: 👵 en modo pasivo-agresivo</li>
-      <li>Cable coaxial: 🔌 atado con masking tape</li>
-      <li>Presencia de gatos en estudio: 🐈 intermitente</li>
-      <li>Backup de ideas: 💾 lleno de memes y recetas</li>
-      <li>Creatividad: 🚀 despegando hacia lo desconocido (acto seguido: se estrella)</li>
-    </ul>
-  </section>
-
-  <!-- 📡 Señales desde el cuchitril -->
-  <section class="senales">
-    <h2>Señales desde el cuchitril</h2>
-    <p id="mensaje-cuchitril">“...”</p>
-  </section>
-
-  <!-- Aquí seguirían las demás secciones: radio, cholguán, contacto... -->
-
-  <!-- 📄 Footer -->
-  <footer class="cuchitril-footer">
-  <div class="footer-content">
-    <p>© El Cuchitril Media 2025 — Todos los derechos reservados por la abuela Enriqueta.</p>
-    <ul class="footer-links">
-  <li><a href="#">Manual de uso no oficial</a></li>
-  <li><a href="#">Modo oscuro (experimental)</a></li>
-  <li>
-    <a href="https://www.instagram.com/elcuchitrilmedia" target="_blank" rel="noopener">
-      Contacto vía señales de humo
-    </a>
-  </li>
-</ul>
-    <p class="footer-frase">“Si llegaste hasta aquí, es porque algo te hizo ruido.”</p>
-  </div>
-</footer>
-</body>
-
+    </footer>
+  </body>
 </html>
