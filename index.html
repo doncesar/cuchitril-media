@@ -127,34 +127,44 @@
 
     <!-- 🎧 Sección del Podcast -->
     <section id="radio" class="podcast-section">
-      <h2 class="podcast-title">🎙️ El Cuchitril Radio</h2>
-      <p class="podcast-subtitle">
-        Episodios grabados entre el delirio y la lucidez.
+      <div class="podcast-logo-wrapper">
+        <img
+          src="assets/images/ECR_COLOR.png"
+          alt="El Cuchitril Radio"
+          class="logo-podcast"
+        />
+      </div>
+
+      <p class="podcast-subtitle rotativa">
+        El mundo no necesita otro podcast.<br />
+        <!--- Cambia cada pocos segundos --->
       </p>
 
       <div class="podcast-player">
         <iframe
+          data-testid="embed-iframe"
           style="border-radius: 12px"
-          src="https://open.spotify.com/show/6OgknfYM92iXJRQC1iU8S1?si=d770b5e605fc4557&nd=1&dlsi=767bc7669f6e4ae5"
+          src="https://open.spotify.com/embed/show/6OgknfYM92iXJRQC1iU8S1?utm_source=generator"
           width="100%"
-          height="152"
+          height="352"
           frameborder="0"
-          allowtransparency="true"
+          allowfullscreen=""
           allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
           loading="lazy"
         ></iframe>
       </div>
 
       <div class="podcast-extras">
-        <button onclick="openModal()" class="autodestruct-btn">
+        <button onclick="openModal()" class="podcast-extras button">
           🕵️ Autodestruir episodio
         </button>
-        <button onclick="recomendarEpisodio()" class="abuela-btn">
+        <button onclick="recomendarEpisodio()" class="podcast-extras button">
           👵 ¿Qué episodio recomienda Enriqueta?
         </button>
         <div class="abuela-recomienda"></div>
       </div>
     </section>
+    <!-- 🦜 Sección del Cholguán -->
 
     <!-- 📄 Footer -->
     <footer class="cuchitril-footer">

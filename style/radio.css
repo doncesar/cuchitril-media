@@ -1,33 +1,56 @@
 /* 🎙️ Podcast Section */
 .podcast-section {
-  background-color: #111;
+  background-color: #0a0a0a;
   color: #f5f5f5;
-  padding: 4em 2em;
+  padding: 5em 2em;
   text-align: center;
-  font-family: 'Orbitron', sans-serif;
+  font-family: "Orbitron", sans-serif;
   position: relative;
+  overflow: hidden;
 }
 
 .podcast-title {
-  font-size: 2.5em;
+  font-size: 2.8em;
   color: #0ff;
-  text-shadow: 0 0 5px #0ff;
-  margin-bottom: 0.2em;
+  text-shadow: 0 0 8px #0ff;
+  margin-bottom: 0.3em;
 }
 
 .podcast-subtitle {
-  font-size: 1.1em;
-  color: #aaa;
+  font-size: 1.2em;
+  color: #ff00aa;
   margin-bottom: 2em;
-  font-style: italic;
+}
+
+/* Frase rotativa */
+.rotativa::after {
+  content: "Grabado en condiciones emocionales inestables.";
+  animation: rotarFrases 12s infinite;
+}
+
+@keyframes rotarFrases {
+  0% {
+    content: "Grabado en condiciones emocionales inestables.";
+  }
+  33% {
+    content: "Editado con café soluble y ansiedad.";
+  }
+  66% {
+    content: "Aprobado por la abuela Enriqueta (con reservas).";
+  }
+  100% {
+    content: "Grabado en condiciones emocionales inestables.";
+  }
 }
 
 .podcast-player {
-  max-width: 600px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
   margin: 0 auto 2em;
-  box-shadow: 0 0 10px #0ff;
+  box-shadow: 0 0 15px #0ff;
   border-radius: 12px;
-  overflow: hidden;
+  background: #111;
 }
 
 .podcast-extras {
@@ -37,26 +60,43 @@
   align-items: center;
 }
 
-.autodestruct-btn,
-.abuela-btn {
-  background: #222;
-  color: #0f0;
-  border: 2px solid #0f0;
-  padding: 0.6em 1.2em;
-  font-family: 'Courier New', monospace;
+.podcast-extras button {
+  background: linear-gradient(145deg, #1a1a1a, #0f0f0f);
+  color: #ff00cc;
+  border: 1px solid #ff00cc;
+  padding: 0.7em 1.4em;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.95em;
+  letter-spacing: 0.5px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 8px rgba(255, 0, 204, 0.3);
 }
 
-.autodestruct-btn:hover,
-.abuela-btn:hover {
-  background: #0f0;
-  color: #000;
+.podcast-extras button:hover {
+  background: #ff00cc;
+  color: #0a0a0a;
+  box-shadow: 0 0 12px #ff00cc;
 }
 
 .abuela-recomienda {
   margin-top: 1em;
   font-size: 0.95em;
   color: #f0f0f0;
-  font-style: italic;
+}
+
+.podcast-logo-wrapper {
+  margin-bottom: 1em;
+}
+
+.logo-podcast {
+  max-width: 300px;
+  width: 80%;
+  height: auto;
+  filter: drop-shadow(0 0 1px #ff00cc) drop-shadow(0 0 12px #ff00cc);
+}
+
+.logo-podcast:hover {
+  filter: drop-shadow(0 0 3px #ff00cc) drop-shadow(0 0 16px #ff00cc);
 }
