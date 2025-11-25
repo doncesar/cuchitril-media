@@ -20,7 +20,6 @@ overlay.addEventListener("click", () => {
   toggle.classList.remove("open");
 });
 
-
 // === Señales desde el cuchitril ===
 function mostrarFraseRetro() {
   const frases = [
@@ -29,7 +28,7 @@ function mostrarFraseRetro() {
     "“Si no entendiste, mejor. Esa es la idea.”",
     "“No actualices, podrías despertarnos.”",
     "“Este sitio se autodestruirá en 5... 4... 3...”",
-    "“No hay plan, con suerte nos va quedando pan.”",
+    "“No hay plan, con suerte nos alcanza para el pan.”",
     "“¿Quién necesita UX cuando tienes intuición?”",
     "“Diseñamos con amor, caos y un poco de café soluble recalentado.”",
     "“La radio está encendida. Nadie sabe cómo se apaga.”",
@@ -37,10 +36,13 @@ function mostrarFraseRetro() {
     "“La estética es importante. La lógica, opcional.”",
     "“Este sitio fue testeado y aprobado por gatos.”",
     "“No tenemos misión. Tenemos intuición.”",
-    "“La abuela dejó un post-it en el servidor. Nadie lo entiende.”",
+    "“La abuela dejó un Post-it en el servidor. Nadie lo entiende.”",
     "“Si algo falla, lo convertimos en contenido.”",
     "“El cuchitril no se explica. Se experimenta.”",
-    "“Bienvenido al holding. No hay salida.”"
+    "“Bienvenido al holding. No hay salida.”",
+    "“El diseño es como la abuela: a veces incomprensible, pero siempre necesario.”",
+    "“Si el sitio carga lento, es porque la abuela está preparando té.”",
+    "“No hay cookies, pero sí galletas caseras.”",
   ];
 
   const mensaje = document.getElementById("mensaje-cuchitril");
@@ -123,22 +125,23 @@ function activarAbuela() {
 
 // === Modal autodestructible ===
 function openModal() {
-
-  const logsRandom = [
+  const logsRandom = [ // Mensajes graciosos para la consola
     "👀 Veo que estás husmeando. Bienvenido al cuchitril interno.",
     "🧠 Este sitio no tiene IA, pero sí tiene abuela. Y eso es más peligroso.",
     "📡 Modo conspiranoia activado. Buscando señales en el código fuente...",
     "💾 Backup emocional detectado. Contiene memes, recetas y una carta sin enviar.",
     "🧨 No se autodestruyó nada, pero gracias por tu entusiasmo.",
     "🪤 Este sitio contiene trazas de sarcasmo, nostalgia y masking tape.",
-    "🧃 ¿Sabías que este código fue escrito bajo los efectos de jugo de piña y ansiedad?",
+    "🧃 ¿Sabías que este código fue escrito bajo los efectos del café soluble y la ansiedad?",
     "🧙‍♂️ Has desbloqueado el modo hechicero. No sirve de nada, pero suena místico.",
     "🧬 Código genético del cuchitril: 80% humor, 15% caos, 5% CSS que no entendemos.",
     "🧪 Este sitio fue testeado en navegadores, tostadoras y una calculadora Casio.",
     "🧘‍♀️ Si estás leyendo esto, probablemente estás procrastinando. Te apoyamos.",
-    "🧂 Este sitio contiene sal. Mucha sal. Especialmente en los diagnósticos."
+    "🛠️ Advertencia: Este sitio fue construido con cinta adhesiva y buenas intenciones.",
+    "🎩 Has encontrado el Easter Egg. No hay premio, pero te ganaste un saludo virtual.",
+    "🚀 Modo explorador activado. Bienvenido a las entrañas del cuchitril."
   ]
-  
+
   document.getElementById('autodestruct-modal').style.display = 'flex';
 
   const log = logsRandom[Math.floor(Math.random() * logsRandom.length)];
@@ -149,12 +152,11 @@ function closeModal() {
   document.getElementById('autodestruct-modal').style.display = 'none';
 }
 
-
 // === El Cholguán interactivo ===
 function activarCholguan() {
   const frases = [
     "Nivel de desinformación: Crítico. Has compartido una cadena de WhatsApp con más de tres emojis de alerta.",
-    "Nivel de desinformación: Elevado. Crees que el eclipse afecta el WiFi.",
+    "Nivel de desinformación: Elevado. Cantaste el himno nacional durante el eclipse.",
     "Nivel de desinformación: Moderado. Consultaste si el cloro sirve como enjuague bucal.",
     "Nivel de desinformación: Preocupante. Reenviaste un video titulado “Mira esto antes de que lo borren”.",
     "Nivel de desinformación: Bajo. Pero sigues creyendo que los gatos absorben la mala energía.",
@@ -179,7 +181,7 @@ function activarCholguan() {
     "Nivel de desinformación: Contagioso. Has dicho “yo lo vi en TikTok, así que debe ser cierto”.",
     "Nivel de desinformación: Vintage. Aún crees que el virus se transmite por antenas 5G.",
     "Nivel de desinformación: Transversal. Has compartido noticias falsas de izquierda, derecha y astrología.",
-    "Nivel de desinformación: Gourmet. Crees que el aceite de coco cura el estrés y la deuda.",
+    "Nivel de desinformación: Gourmet. Crees que el aceite de coco cura el estrés y las deudas.",
     "Nivel de desinformación: Institucionalizado. Citaste a un diputado en una conversación sobre física cuántica."
   ];
 
@@ -207,8 +209,8 @@ function activarCholguan() {
 // === Capitulos recomendados por la abuela ===
 function recomendarEpisodio() {
   const frases = [
-    "Escucha el episodio 5. No sé de qué trata, pero el título me dio rabia.",
-    "El episodio 1 tiene menos errores que tu ortografía. Apenas.",
+    "Escucha el episodio 5. No sé de qué trata, pero el título me dio curiosidad.",
+    "El episodio 1 tiene más errores que tu ortografía, y me quedo corta...",
     "El episodio 3 es como una empanada sin pino: raro, pero igual se disfruta.",
     "No escuches el 2. Me hace llorar y no sé por qué.",
     "El 4 es el más corto. Ideal si estás apurado o emocionalmente inestable."
