@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "titulo": "Noticia insólita",
+    "intro": "Algo realmente fuera de lo común ha ocurrido...",
+    "img": "https://cdn.pixabay.com/photo/2017/02/20/18/03/cat-2083492_1280.jpg",
+    "texto": "En un giro inesperado de los acontecimientos, un grupo de pingüinos ha tomado el control de una estación de metro."
+  },
+  {
+    "id": 2,
+    "titulo": "Encuesta revela lo obvio",
+    "intro": "El 99% de los encuestados ya sabía la respuesta...",
+    "img": "https://cdn.pixabay.com/photo/2017/02/20/18/03/cat-2083492_1280.jpg",
+    "texto": "Un estudio ficticio confirma lo que todos sospechaban: que la encuesta no tenía sentido."
+  },
+  {
+    "id": 3,
+    "titulo": "Tecnología revolucionaria",
+    "intro": "Un invento que cambiará el mundo para siempre...",
+    "img": "https://cdn.pixabay.com/photo/2017/02/20/18/03/cat-2083492_1280.jpg",
+    "texto": "Científicos han desarrollado un dispositivo que convierte el aire en chocolate, pero solo funciona los martes."
+  },
+  {
+    "id": 4,
+    "titulo": "El gato filósofo",
+    "intro": "Un felino que reflexiona sobre la vida...",
+    "img": "https://cdn.pixabay.com/photo/2017/02/20/18/03/cat-2083492_1280.jpg",
+    "texto": "El gato del barrio fue entrevistado y dejó frases que marcarán la historia del pensamiento picante."
+  }
+]

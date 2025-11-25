@@ -1,0 +1,99 @@
+/* Fondo compartido desde hero */
+.fondo-hero {
+  background-image: url("../assets/images/Fondo1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 4rem 1rem;
+}
+
+/* Overlay tipo vidrio oscuro */
+.contacto-overlay {
+  background-color: rgba(0, 0, 0, 0.75); /* más oscuro */
+  backdrop-filter: blur(6px);            /* desenfoque tipo vidrio */
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 0 20px #ff00aa;
+  margin: 2rem auto;
+  max-width: 700px;
+  text-align: center;
+}
+
+/* Contenedor del título */
+.contacto-titulo {
+  margin-bottom: 2rem;
+}
+
+/* Imagen del título */
+.section-title-img {
+  max-width: 500px;
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 0 1px #ff00cc) drop-shadow(0 0 12px #ff00cc);
+}
+
+/* Título dinámico del formulario */
+.contacto-form-title {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#frase-absurda {
+  min-height: 3em; /* evita saltos verticales al cambiar frases */
+}
+
+/* Formulario estable */
+.contacto-form-wrapper {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+#form-contacto {
+  width: 100%;
+}
+
+#form-contacto input,
+#form-contacto textarea {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+  padding: 0.8rem;
+  border: 1px solid #ff00aa;
+  background-color: rgba(26, 26, 26, 0.9);
+  color: #fff;
+  border-radius: 6px;
+  font-family: inherit;
+}
+
+#form-contacto button {
+  background-color: #ff00aa;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+#form-contacto button:hover {
+  background-color: #ff4dcb;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .contacto-overlay {
+    background-color: rgba(0, 0, 0, 0.85);
+    padding: 1.5rem;
+  }
+
+  .section-title-img {
+    max-width: 90%;
+  }
+}

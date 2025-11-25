@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="style/animations.css" />
     <link rel="stylesheet" href="style/inicio.css" />
     <link rel="stylesheet" href="style/modal.css" />
+    <link rel="stylesheet" href="style/contacto.css" />
     <link rel="icon" href="assets/images/RAYOS.png" type="image/png" />
     <link
       href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap"
@@ -23,7 +24,7 @@
 
   <body>
     <script src="scripts/main.js" defer></script>
-    <!-- 🧭 Barra de navegación -->
+    <!-- Barra de navegación -->
     <nav class="navbar">
       <img
         src="assets/images/ECM_COLOR.png"
@@ -42,7 +43,7 @@
       </ul>
     </nav>
 
-    <!-- 🏠 Sección de inicio con fondo hero -->
+    <!-- Sección de inicio con fondo hero -->
     <section id="inicio" class="hero">
       <div class="overlay">
         <img
@@ -57,7 +58,7 @@
       </div>
     </section>
 
-    <!-- 🚫 Lo que NO hacemos -->
+    <!-- Lo que NO hacemos -->
     <section class="no-hacemos">
       <h2>Lo que NO hacemos</h2>
       <ul>
@@ -72,7 +73,7 @@
       </ul>
     </section>
 
-    <!-- 🧪 Experimentos activos -->
+    <!-- Experimentos activos -->
     <section class="experimentos">
       <h2>Experimentos activos</h2>
       <div class="experimento-grid">
@@ -101,7 +102,7 @@
       </div>
     </section>
 
-    <!-- 📊 Estado del holding -->
+    <!-- Estado del holding -->
     <section class="estado-holding">
       <h2>Estado del holding</h2>
       <ul>
@@ -119,13 +120,13 @@
       </ul>
     </section>
 
-    <!-- 📡 Señales desde el cuchitril -->
+    <!-- Señales desde el cuchitril -->
     <section class="senales">
       <h2>Señales desde el cuchitril</h2>
       <p id="mensaje-cuchitril">“...”</p>
     </section>
 
-    <!-- 🎧 Sección del Podcast -->
+    <!-- Sección del Podcast -->
     <section id="radio" class="podcast-section">
       <div class="podcast-logo-wrapper">
         <img
@@ -164,9 +165,63 @@
         <div class="abuela-recomienda"></div>
       </div>
     </section>
-    <!-- 🦜 Sección del Cholguán -->
 
-    <!-- 📄 Footer -->
+    <!-- Sección de El Cholguán -->
+
+    <section id="cholguan">
+      <div class="section-header">
+        <img
+          src="assets/images/EL CHOLGUAN.png"
+          alt="El Cholguán"
+          class="section-title-img"
+        />
+      </div>
+
+      <div class="cholguan-grid">
+        <!-- Aquí se cargan las tarjetas dinámicamente -->
+      </div>
+    </section>
+
+    <!-- Sección Contacto-->
+
+    <section id="contacto" class="fondo-hero">
+      <div class="contacto-overlay">
+        <div class="contacto-titulo">
+          <div class="section-header">
+            <img
+              src="assets/images/CONTACTO.png"
+              alt="Título Contacto"
+              class="section-title-img"
+            />
+          </div>
+          <h3 class="contacto-form-title" id="frase-absurda">
+            ¿Tienes algo absurdo que contarnos?
+          </h3>
+        </div>
+
+        <div class="contacto-form-wrapper">
+          <form
+            id="form-contacto"
+            action="mailto:tu-correo@ejemplo.com?subject=Absurdidad%20desde%20El%20Cuchitril"
+            method="POST"
+            enctype="text/plain"
+          >
+            <input type="text" name="nombre" placeholder="Tu nombre" required />
+            <input type="email" name="email" placeholder="Tu correo" required />
+            <textarea
+              name="mensaje"
+              placeholder="Tu mensaje"
+              required
+            ></textarea>
+            <button type="submit">Enviar</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fin Sección Contacto-->
+
+    <!-- Footer -->
     <footer class="cuchitril-footer">
       <div class="footer-content">
         <p>
@@ -223,5 +278,18 @@
         </div>
       </div>
     </div>
+    <!-- Fin del Modal -->
+
+    <!-- Modal del Cholguán -->
+    <div id="modal-cholguan" class="modal-cholguan">
+      <div class="modal-cholguan-content">
+        <span class="modal-cholguan-close">&times;</span>
+        <img class="modal-cholguan-img" src="" alt="Imagen noticia" />
+        <h3 class="modal-cholguan-title"></h3>
+        <p class="modal-cholguan-text"></p>
+        <button class="modal-cholguan-share">Compartir esta noticia</button>
+      </div>
+    </div>
+    <!-- Fin del Modal del Cholguán -->
   </body>
 </html>

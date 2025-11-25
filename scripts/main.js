@@ -219,6 +219,109 @@ function recomendarEpisodio() {
   document.querySelector(".abuela-recomienda").textContent = random;
 }
 
+// === Modal de El Cholguán ===
+class CholguanModal {
+  constructor(modalId) {
+    this.modal = document.getElementById(modalId);
+    this.titleEl = this.modal.querySelector(".modal-cholguan-title");
+    this.textEl = this.modal.querySelector(".modal-cholguan-text");
+    this.imgEl = this.modal.querySelector(".modal-cholguan-img");
+    this.shareBtn = this.modal.querySelector(".modal-cholguan-share");
+    this.closeBtn = this.modal.querySelector(".modal-cholguan-close");
+
+    this.setupCloseEvents();
+    this.setupShare();
+  }
+
+  setupCloseEvents() {
+    this.closeBtn.addEventListener("click", () => this.close());
+    window.addEventListener("click", (e) => {
+      if (e.target === this.modal) this.close();
+    });
+  }
+
+  setupShare() {
+    this.shareBtn.addEventListener("click", () => {
+      const texto = `${this.titleEl.textContent}\n\n${this.textEl.textContent}`;
+      navigator.clipboard.writeText(texto).then(() => {
+        this.shareBtn.textContent = "¡Copiado!";
+        setTimeout(() => {
+          this.shareBtn.textContent = "Compartir esta noticia";
+        }, 1500);
+      });
+    });
+  }
+
+  open(noticia) {
+    if (!noticia) return;
+
+    this.titleEl.textContent = noticia.titulo;
+    this.textEl.textContent = noticia.texto;
+    this.imgEl.src = noticia.img;
+    this.modal.style.display = "flex";
+  }
+
+  close() {
+    this.modal.style.display = "none";
+  }
+}
+
+function openCholguanModal() {
+  fetch("noticias.json")
+    .then(response => response.json())
+    .then(data => {
+      const grid = document.querySelector(".cholguan-grid");
+      grid.innerHTML = "";
+
+      const modalManager = new CholguanModal("modal-cholguan");
+
+      data.forEach(noticia => {
+        const card = document.createElement("div");
+        card.className = "cholguan-card";
+        card.innerHTML = `
+          <img src="${noticia.img}" alt="Imagen noticia">
+          <h3>${noticia.titulo}</h3>
+          <p>${noticia.intro}</p>
+          <button class="ver-mas" data-id="${noticia.id}">Ver más</button>
+        `;
+        grid.appendChild(card);
+      });
+
+      grid.querySelectorAll(".ver-mas").forEach(btn => {
+        btn.addEventListener("click", () => {
+          const id = btn.getAttribute("data-id");
+          const noticia = data.find(n => n.id == id);
+          modalManager.open(noticia);
+        });
+      });
+    });
+}
+
+//== Fraces sección Contacto ===
+function mostrarFraseContacto() {
+  const frases = [
+    "¿Tienes algo absurdo que contarnos?",
+    "¿Tu abuela te dijo algo que merece ser archivado?",
+    "¿La abuela Enriqueta te habló en sueños?",
+    "¿Escuchaste un podcast que te hizo cuestionar la realidad?",
+    "¿Tu gato te dio una idea millonaria?",
+    "¿Te llegó una señal desde el subsuelo?",
+    "¿Tu mensaje podría cambiar el mundo (o al menos hacernos reír)?",
+    "¿Quieres confesar algo que ni tú entiendes?",
+    "¿Tu tostadora te habló y necesitas contarlo?",
+    "¿Tu absurda idea merece un lugar en El Cuchitril?"
+  ];
+
+  const fraseElemento = document.getElementById("frase-absurda");
+  let index = 0;
+
+  setInterval(() => {
+    index = (index + 1) % frases.length;
+    fraseElemento.textContent = frases[index];
+  }, 4000); // cambia cada 4 segundos
+
+}
+
 // === Animaciones del hero (placeholder) ===
 function iniciarAnimacionesHero() {
   // Aquí podrías agregar efectos como glitch, fade, o scroll reveal
@@ -229,5 +332,10 @@ function iniciarAnimacionesHero() {
 document.addEventListener("DOMContentLoaded", () => {
   mostrarFraseRetro();
   iniciarAnimacionesHero();
+  openCholguanModal();
+  mostrarFraseContacto();
   // Aquí puedes activar más funciones a medida que las vayas creando
 });
+
+
+

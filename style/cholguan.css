@@ -1,0 +1,175 @@
+/* 🌶️ Recuadros del Cholgüán */
+.cholguan-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.cholguan-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid #ff00aa;
+  border-radius: 12px;
+  padding: 1.5rem;
+  width: 280px;
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.cholguan-card:hover {
+  transform: scale(1.05);
+}
+
+.cholguan-card img {
+  width: 100%;
+  max-height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.cholguan-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: #ffd6f6;
+}
+
+.cholguan-card p {
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #e0e0e0;
+}
+
+.cholguan-card button {
+  margin-top: 1rem;
+  background-color: #ff00aa;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.cholguan-card button:hover {
+  background-color: #ff4dcb;
+}
+
+/* 📰 Modal del Cholgüán */
+.modal-cholguan {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  font-family: inherit;
+}
+
+.modal-cholguan-content {
+  position: relative;
+  background-color: #1a1a1a;
+  border: 1px solid #ff00aa;
+  color: #e0e0e0;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 0 20px #ff00aa;
+  text-align: center;
+  animation: fadeInModal 0.3s ease-out;
+}
+
+.modal-cholguan-img {
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.modal-cholguan-title {
+  font-size: 1.8rem; /* más grande */
+  color: #ffd6f6;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.modal-cholguan-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #e0e0e0;
+  margin-top: 1rem;
+}
+
+.modal-cholguan-share {
+  margin-top: 2rem;
+  background-color: #ff00aa;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.modal-cholguan-share:hover {
+  background-color: #ff4dcb;
+}
+
+.modal-cholguan-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ff00aa;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.modal-cholguan-close:hover {
+  color: #ff4dcb;
+}
+
+@keyframes fadeInModal {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.section-title-img {
+  width: 100%;          /* ocupa todo el ancho disponible */
+  max-width: 700px;     /* límite en pantallas grandes */
+  height: auto;         /* mantiene proporción */
+  display: inline-block;
+  filter: drop-shadow(0 0 1px #ff00cc) drop-shadow(0 0 12px #ff00cc);
+}
+
+@media (max-width: 768px) {
+  .section-title-img {
+    max-width: 90%;   /* ocupa casi todo el ancho en tablets/móviles */
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title-img {
+    max-width: 100%;  /* full ancho en móviles chicos */
+  }
+}
+
